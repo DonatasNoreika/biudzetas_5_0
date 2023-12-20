@@ -1,6 +1,7 @@
 from models.irasas import Irasas
 from biudzetas import logger
 
+
 class IslaiduIrasas(Irasas):
     def __init__(self, suma, budas, isigyta, info):
         super().__init__(suma)

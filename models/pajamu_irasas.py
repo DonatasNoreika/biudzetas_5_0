@@ -1,5 +1,7 @@
 from models.irasas import Irasas
 from biudzetas import logger
+
+
 class PajamuIrasas(Irasas):
     def __init__(self, suma, siuntejas, info):
         super().__init__(suma)

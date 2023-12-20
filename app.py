@@ -3,7 +3,12 @@ from biudzetas import Biudzetas
 biudzetas = Biudzetas()
 
 while True:
-    veiksmas = int(input("1 - įvesti pajamas\n2 - įvesti išlaidas\n3 - ataskaita\n4 - balansas\n0 - išeiti\n"))
+    veiksmas = int(input("""1 - įvesti pajamas
+2 - įvesti išlaidas
+3 - ataskaita
+4 - balansas
+0 - išeiti
+"""))
     match veiksmas:
         case 1:
             suma = float(input("Suma: "))

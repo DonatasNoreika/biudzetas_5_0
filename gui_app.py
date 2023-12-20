@@ -1,6 +1,7 @@
 import tkinter as tk
 from biudzetas import Biudzetas
 
+
 class PagrindinisLangas:
     def __init__(self, master):
         self.biudzetas = Biudzetas()
@@ -29,7 +30,6 @@ class PagrindinisLangas:
     def atidaryti_islaidu_langa(self):
         self.newWindow = tk.Toplevel(self.master)
         self.app = IslaiduLangas(self.newWindow, self.biudzetas, self)
-
 
     def update_zurnalas_balansas(self):
         self.zurnalas.delete(0, tk.END)

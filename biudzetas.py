@@ -18,8 +18,6 @@ logger.addHandler(stream_handler)
 from models.islaidu_irasas import IslaiduIrasas
 from models.pajamu_irasas import PajamuIrasas
 
-# logging.basicConfig(filename="biudzetas.log", level=logging.DEBUG, format='%(asctime)s:%(levelname)s:%(message)s', encoding="UTF-8")
-
 
 class Biudzetas:
     def __init__(self):
@@ -30,7 +28,7 @@ class Biudzetas:
             with open("zurnalas.pkl", 'rb') as file:
                 zurnalas = pickle.load(file)
                 logger.info("Žurnalas nuskaitytas iš failo")
-        except:
+        except FileNotFoundError:
             zurnalas = []
             logger.info("Sukurtas naujas žurnalas")
         return zurnalas
